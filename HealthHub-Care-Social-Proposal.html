@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Proposal · HealthHub Care | MAIA Creative House</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0B0B'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C9A96E' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-primary: #0B0B0B;
+    --bg-card: #141210;
+    --bg-card-hover: #1A1815;
+    --bg-sprint: #0F0D0A;
+    --gold: #C9A96E;
+    --gold-light: #D4BC8B;
+    --gold-dim: rgba(201,169,110,0.12);
+
+    --text-primary: #F5F0EB;
+    --text-secondary: #9A9590;
+    --text-muted: #6B6560;
+    --border: #2A2520;
+    --border-light: #3A3530;
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── Navigation ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(11,11,11,0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 3rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ─── Sections ─── */
+  section {
+    min-height: 100vh;
+    padding: 8rem 3rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 640px;
+  }
+
+  .subtitle {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ─── Cover ─── */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 0;
+    position: relative;
+  }
+
+  .cover h1 { font-size: clamp(3.5rem, 7vw, 5.5rem); margin-bottom: 0.5rem; }
+
+  .cover .subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .cover-meta-item { text-align: left; }
+  .cover-meta-item:last-child { text-align: right; }
+
+  .cover-meta-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .cover-meta-value { font-size: 14px; font-weight: 400; color: var(--text-primary); }
+  .cover-meta-sub { font-size: 12px; color: var(--text-muted); margin-top: 0.2rem; }
+
+  .cover-meta-sub2 {
+    font-size: 11px;
+    color: var(--gold);
+    margin-top: 0.15rem;
+    letter-spacing: 0.03em;
+  }
+
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ─── Objectives Box ─── */
+  .objectives-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .objectives-box .section-label { color: var(--gold); margin-bottom: 1.2rem; }
+
+  .objectives-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .objectives-list li {
+    font-size: 14px;
+    color: var(--text-primary);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .objectives-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* ─── Compliance Note ─── */
+  .compliance-note {
+    background: rgba(201,169,110,0.04);
+    border: 1px solid rgba(201,169,110,0.2);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1.2rem 1.8rem;
+    margin: 2rem 0 0;
+  }
+
+  .compliance-note p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .compliance-note strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* ─── Pillars ─── */
+  .pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .pillar {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0 1.2rem;
+    align-items: start;
+  }
+
+  .pillar-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .pillar-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .pillar-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    grid-column: 2;
+  }
+
+  /* ─── Phase 0 Sprint Banner ─── */
+  .sprint-banner {
+    background: var(--bg-sprint);
+    border: 1px solid rgba(201,169,110,0.25);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sprint-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .sprint-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-dim);
+    border: 1px solid rgba(201,169,110,0.25);
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-bottom: 1.2rem;
+  }
+
+  .sprint-title {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .sprint-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .sprint-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .sprint-price {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--gold-light);
+  }
+
+  .sprint-price-note {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .sprint-commitment {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.03em;
+  }
+
+  .sprint-divider {
+    height: 1px;
+    background: rgba(201,169,110,0.2);
+    opacity: 0.4;
+    margin-bottom: 1.8rem;
+  }
+
+  .sprint-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .sprint-features li {
+    font-size: 14px;
+    color: var(--text-primary);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .sprint-features li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .sprint-best-for {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(201,169,110,0.15);
+  }
+
+  /* ─── Pricing Cards ─── */
+  .options-intro { margin-bottom: 0.5rem; }
+  .options-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+    font-style: italic;
+  }
+
+  .pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .pricing-card:hover { border-color: var(--border-light); }
+
+  .pricing-card.recommended {
+    border-color: var(--gold);
+  }
+
+  .pricing-card.recommended::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+
+  .card-badge {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .badge-rec {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    background: var(--gold-dim);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .price-amount {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--text-primary);
+  }
+
+  .price-period { font-size: 14px; color: var(--text-muted); }
+
+  .price-commitment {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 1.8rem;
+  }
+
+  .card-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 1.8rem;
+  }
+
+  .card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .card-features li {
+    font-size: 14px;
+    color: var(--text-primary);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .card-features li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .card-best-for {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ─── Add-on Card ─── */
+  .addon-card {
+    background: #0D0D10;
+    border: 1px dashed rgba(201,169,110,0.3);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  .addon-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .addon-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .addon-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+
+  .addon-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .addon-price {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold-light);
+  }
+
+  .addon-price-note { font-size: 13px; color: var(--text-muted); }
+
+  .addon-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .addon-features li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .addon-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+    color: var(--gold);
+    top: 2px;
+  }
+
+  /* ─── Timeline ─── */
+  .timeline {
+    position: relative;
+    margin: 2.5rem 0;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-item:last-child { margin-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem; top: 6px;
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 2px solid var(--gold);
+    z-index: 1;
+  }
+
+  .timeline-dot.gold-dot {
+    border-color: var(--gold);
+  }
+
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+
+
+  .timeline-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-label.gold-label { color: var(--gold); }
+
+  .timeline-title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ─── Next Steps ─── */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .step-num {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .step-text {
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-top: 0.15rem;
+  }
+
+  /* ─── CTA Box ─── */
+  .cta-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-box .section-label { color: var(--text-muted); margin-bottom: 1rem; }
+
+  .cta-link {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .cta-link:hover { color: var(--gold-light); }
+
+  .cta-email {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 0.8rem;
+  }
+
+  .cta-email a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .cta-email a:hover { color: var(--gold); }
+
+  /* ─── Footer ─── */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 3rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover { color: var(--gold); }
+
+  .section-divider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── Animations ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .fade-up:nth-child(1) { animation-delay: 0.1s; }
+  .fade-up:nth-child(2) { animation-delay: 0.2s; }
+  .fade-up:nth-child(3) { animation-delay: 0.3s; }
+  .fade-up:nth-child(4) { animation-delay: 0.4s; }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 640px) {
+    section { padding: 6rem 1.5rem 3rem; }
+    nav { padding: 0 1.5rem; }
+    .pricing-card, .sprint-banner { padding: 2rem; }
+    .cover-meta { flex-direction: column; gap: 1.5rem; }
+    .cover-meta-item:last-child { text-align: left; }
+    footer { flex-direction: column; gap: 0.5rem; padding: 2rem 1.5rem; }
+    .nav-links { display: none; }
+  }
+
+  @media print {
+    nav { display: none; }
+    section { min-height: auto; page-break-after: always; padding: 2rem 0; }
+    .pricing-card, .sprint-banner, .addon-card { break-inside: avoid; }
+    body { background: white; color: #1a1a1a; }
+    h1, h2, .card-title, .sprint-title, .pillar-num, .step-num { color: #8B7340; }
+    p, .card-features li, .objectives-list li, .sprint-features li { color: #333; }
+    .compliance-note { border-left-color: #8B7340; background: #fafaf8; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-brand">MAIA Creative House</div>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#sprint">Brand Sprint</a></li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#next">Next Steps</a></li>
+  </ul>
+</nav>
+
+<!-- Cover -->
+<section class="cover" id="cover">
+  <div class="fade-up">
+    <div class="section-label">Social Media Proposal &middot; April 2026</div>
+  </div>
+  <h1 class="fade-up">HealthHub Care</h1>
+  <div class="subtitle fade-up">Brand Presence & Social Media Strategy</div>
+  <div class="cover-divider fade-up"></div>
+  <div class="cover-meta fade-up">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Prepared by</div>
+      <div class="cover-meta-value">Güneş Yildizoglu</div>
+      <div class="cover-meta-sub2">MAIA Creative House</div>
+      <div class="cover-meta-sub">gunes@maiacreativehouse.com</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Prepared for</div>
+      <div class="cover-meta-value">Moiz, HealthHub Care</div>
+      <div class="cover-meta-sub">healthhub.care</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Overview -->
+<section id="overview">
+  <div class="section-label">01 · Overview</div>
+  <h2>Understanding Your Needs</h2>
+  <p>The telehealth wellness space is more crowded than ever, and most platforms are producing the same generic, clinical content. HealthHub Care offers something more: board-certified providers, transparent one-time pricing, an in-house pharmacy, and a full range of treatments from weight loss and hormone therapy to NAD+, peptides, and anti-aging. That depth of care isn't being felt on social yet. That's the gap we close.</p>
+
+  <div class="objectives-box">
+    <div class="section-label">Your Objectives</div>
+    <ul class="objectives-list">
+      <li>Build a clear, consistent brand presence before scaling content volume</li>
+      <li>Post 3&ndash;4 times per week across Instagram and Facebook</li>
+      <li>Grow an engaged community around health, wellness, and self-care</li>
+      <li>Establish content pillars, visual identity, and a strategic posting cadence</li>
+      <li>Build trust and authority in the wellness &amp; telehealth space</li>
+      <li>Convert followers into consultations through lead generation automation</li>
+    </ul>
+  </div>
+
+  <div class="compliance-note">
+    <p><strong>A note on healthcare content.</strong> Telehealth and compounded medication content operates in a regulated space, FDA guidelines, FTC disclosure requirements, and platform-specific health content policies all apply. Every piece of content we create is designed to be both compelling <em>and</em> compliant. Navigating this landscape is part of the work, not an afterthought.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Approach -->
+<section id="approach">
+  <div class="section-label">02 · Approach</div>
+  <h2>How We Work</h2>
+  <p>Before a single post goes live, we build the foundation: who you're talking to, what you stand for, and why it matters to them. Content without strategy is noise. Strategy without content is theory. Every post we craft has both.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div>
+        <div class="pillar-title">Brand Clarity First</div>
+      </div>
+      <div class="pillar-desc">Define your voice, visual identity, messaging framework, and content pillars before anything goes live. This is the work that makes everything else work. Skipping it is the most expensive mistake brands make.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div>
+        <div class="pillar-title">Strategic Content</div>
+      </div>
+      <div class="pillar-desc">A content calendar that balances educational, trust-building, and conversion-driven posts across both platforms, built specifically for the telehealth and wellness audience.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div>
+        <div class="pillar-title">Growth &amp; Lead Generation</div>
+      </div>
+      <div class="pillar-desc">Consistent posting paired with community engagement and ManyChat automation, so your content doesn't just get seen, it generates consultations. Social that actually sells.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Brand Sprint -->
+<section id="sprint">
+  <div class="section-label">03 · Where We Begin</div>
+  <h2>The Brand Sprint</h2>
+  <p>This is the starting point for every new client, and it's especially critical when starting from zero. A brand sprint condenses weeks of strategic work into one focused week. What comes out the other side: clarity, direction, and a social presence that actually means something.</p>
+
+  <div class="sprint-banner">
+    <div class="sprint-tag">&#9670; Foundation · One-Time</div>
+    <div class="sprint-title">Brand Clarity Sprint</div>
+    <div class="sprint-subtitle">One-Week Strategic Foundation</div>
+    <div class="sprint-price-row">
+      <span class="sprint-price">$950</span>
+      <span class="sprint-price-note">one-time · credited toward any monthly package</span>
+    </div>
+    <div class="sprint-commitment">Delivered within 5 business days</div>
+    <div class="sprint-divider"></div>
+    <ul class="sprint-features">
+      <li>Brand voice &amp; tone guidelines tailored to the telehealth and wellness audience</li>
+      <li>Visual identity direction for social (colors, typography, content aesthetic)</li>
+      <li>3&ndash;4 content pillars with messaging framework for each</li>
+      <li>Audience persona(s): who you're talking to and what moves them</li>
+      <li>Platform-specific positioning (Instagram vs. Facebook strategy)</li>
+      <li>First-month content calendar outline with 12 post concepts</li>
+      <li>1×  brand strategy session (90 min) to present and align on direction</li>
+    </ul>
+    <div class="sprint-best-for">
+      <strong style="color: var(--gold-light); font-style: normal; font-weight: 500;">Why this matters:</strong> Posting 3–4 times per week without brand clarity is just adding noise. The Sprint ensures that from day one, every post is saying the right thing to the right person, in a voice that's unmistakably HealthHub Care. The $950 investment is credited in full when you move to a monthly package.
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Options -->
+<section id="options">
+  <div class="section-label">04 · Monthly Investment</div>
+  <h2>Your Options</h2>
+  <p class="options-intro">Choose the level of engagement that fits where you are.</p>
+  <p class="options-sub">All packages begin after the Brand Sprint is complete. This ensures the content we create from day one is strategic, on-brand, and built to convert.</p>
+
+  <div class="pricing-grid">
+
+    <!-- Option A -->
+    <div class="pricing-card">
+      <div class="card-badge">Option A</div>
+      <div class="card-title">Presence</div>
+      <div class="card-subtitle">Strategy &amp; Direction</div>
+      <div class="card-price">
+        <span class="price-amount">$1,500</span>
+        <span class="price-period">/month</span>
+      </div>
+      <div class="price-commitment">3-month minimum · Brand Sprint required</div>
+      <div class="card-divider"></div>
+      <ul class="card-features">
+        <li>Monthly brand strategy session (1.5 hrs)</li>
+        <li>12&ndash;16 posts per month created, written, and designed by MAIA</li>
+        <li>Content delivered for your review and approval before anything goes live</li>
+        <li>Scheduling and publishing on your behalf once approved</li>
+        <li>Content pillar &amp; messaging framework (delivered in Sprint, refined monthly)</li>
+        <li>Monthly performance report with insights and recommendations</li>
+        <li>Email support (48hr response time)</li>
+      </ul>
+      <div class="card-best-for">Best for: You want full content creation and a consistent posting schedule, with final say before anything publishes. MAIA handles the work; you stay in control.</div>
+    </div>
+
+    <!-- Option B -->
+    <div class="pricing-card recommended">
+      <div class="card-badge">
+        Option B
+        <span class="badge-rec">Recommended</span>
+      </div>
+      <div class="card-title">Presence+</div>
+      <div class="card-subtitle">Full Content Creation &amp; Management</div>
+      <div class="card-price">
+        <span class="price-amount">$2,800</span>
+        <span class="price-period">/month</span>
+      </div>
+      <div class="price-commitment">3-month minimum · Brand Sprint required</div>
+      <div class="card-divider"></div>
+      <ul class="card-features">
+        <li>Everything in Presence, plus:</li>
+        <li>Active community management, comments, DMs, and replies monitored daily</li>
+        <li>Branded response templates for common questions and inquiries</li>
+        <li>Engagement strategy to grow followers and build community trust</li>
+        <li>Bi-weekly performance check-ins with data-backed adjustments</li>
+        <li>Compliance-aware content production throughout</li>
+      </ul>
+      <div class="card-best-for">Best for: You want the full done-for-you experience, content creation, publishing, and an active presence in your comments and DMs every day. Your social runs while you run your business.</div>
+    </div>
+
+    <!-- Option C -->
+    <div class="pricing-card">
+      <div class="card-badge">Option C</div>
+      <div class="card-title">Presence Pro</div>
+      <div class="card-subtitle">Full Management + Lead Generation</div>
+      <div class="card-price">
+        <span class="price-amount">$3,600</span>
+        <span class="price-period">/month</span>
+      </div>
+      <div class="price-commitment">3-month minimum · Brand Sprint required</div>
+      <div class="card-divider"></div>
+      <ul class="card-features">
+        <li>Everything in Presence+, plus:</li>
+        <li>ManyChat DM automation setup (1 lead generation flow)</li>
+        <li>1 monthly ManyChat campaign (e.g. "Comment CARE to get our free guide")</li>
+        <li>Lead capture sequence: DM → opt-in → consultation booking flow</li>
+        <li>Monthly ManyChat performance report with subscriber growth tracking</li>
+        <li>Keyword trigger strategy optimized for Instagram &amp; Facebook</li>
+      </ul>
+      <div class="card-best-for">Best for: You want your social content to actively generate consultation bookings, not just likes. The ManyChat layer turns engagement into a measurable pipeline.</div>
+    </div>
+
+    <!-- ManyChat Add-On -->
+    <div class="addon-card">
+      <div class="addon-label">&#9670; Optional Add-On · Available with Option A or B</div>
+      <div class="addon-title">ManyChat Lead Generation</div>
+      <div class="addon-subtitle">DM Automation &amp; Lead Capture</div>
+      <div class="addon-price-row">
+        <span class="addon-price">+$500</span>
+        <span class="addon-price-note">/month · add to any package</span>
+      </div>
+      <ul class="addon-features">
+        <li>ManyChat account setup and integration with your Instagram &amp; Facebook</li>
+        <li>1 lead generation automation flow built and activated per month</li>
+        <li>Keyword trigger strategy ("Comment LEARN", "Comment CARE", etc.)</li>
+        <li>DM → opt-in → consultation booking sequence</li>
+        <li>Monthly subscriber and conversion reporting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Timeline -->
+<section id="timeline">
+  <div class="section-label">05 · Timeline</div>
+  <h2>What to Expect</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot gold-dot"></div>
+      <div class="timeline-label gold-label">Week 1 · Brand Sprint</div>
+      <div class="timeline-title">Foundation Before Content</div>
+      <div class="timeline-desc">Brand voice, visual identity direction, content pillars, audience personas, and platform strategy. Delivered in a 90-minute strategy session at end of week. By Friday, the direction is clear and we're aligned before a single post goes live.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Week 2</div>
+      <div class="timeline-title">Calendar &amp; Content Setup</div>
+      <div class="timeline-desc">First month's content calendar delivered in full. For Presence+ and Pro, content creation begins immediately, all copy and creative briefed against Sprint outputs. ManyChat flow setup begins for Pro clients.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Weeks 3&ndash;4</div>
+      <div class="timeline-title">Launch &amp; Optimize</div>
+      <div class="timeline-desc">Content goes live on a consistent cadence. Community engagement begins. For Pro clients, ManyChat campaigns activate. We monitor, learn, and refine in real time.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Monthly</div>
+      <div class="timeline-title">Review &amp; Evolve</div>
+      <div class="timeline-desc">Performance report, strategy session, and next month's calendar, informed by data. What's working gets amplified. What isn't gets rethought. Continuous improvement is built into the process.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Next Steps -->
+<section id="next">
+  <div class="section-label">06 · Next Steps</div>
+  <h2>Let's Get Started</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-text">We talk through which monthly option fits best and confirm the Brand Sprint as our starting point. One 30-minute call is all it takes to map the first 30 days.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-text">Once you're in, I send a simple agreement, and we kick off the Brand Sprint within the week. You'll receive a short onboarding questionnaire to complete beforehand.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-text">Sprint outputs are delivered by Friday of week one. Your first content calendar lands in week two. From there, HealthHub Care starts showing up, consistently, intentionally, every week.</div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <div class="section-label">When you're ready, I'm here.</div>
+    <a href="https://calendly.com/gunes-maiacreativehouse/30min" class="cta-link" target="_blank">Book a call &rarr; calendly.com/gunes-maiacreativehouse/30min</a>
+    <div class="cta-email"><a href="mailto:gunes@maiacreativehouse.com">gunes@maiacreativehouse.com</a></div>
+  </div>
+</section>
+
+<footer>
+  <span>MAIA Creative House &copy; 2026</span>
+  <span><a href="https://www.maiacreativehouse.com" target="_blank">maiacreativehouse.com</a></span>
+</footer>
+
+</body>
+</html>
